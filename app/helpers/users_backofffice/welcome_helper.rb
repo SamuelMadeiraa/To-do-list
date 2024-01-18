@@ -1,0 +1,2 @@
+module UsersBackofffice::WelcomeHelper
+end
