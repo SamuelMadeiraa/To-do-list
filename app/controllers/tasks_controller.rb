@@ -25,7 +25,7 @@ class TasksController < ApplicationController
     end
 
     def update 
-        if @task.update(task_paams)
+        if @task.update(task_params)
             redirect_to @task, notice: "Tarefa atalizada com sucesso"
         else
             render :edit
@@ -40,7 +40,7 @@ class TasksController < ApplicationController
     private
 
     def set_task
-        @task = TAsk.find(params[:id])
+        @task = Task.find(params[:id])
     end
 
     def task_params
